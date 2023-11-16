@@ -7,7 +7,13 @@ const app = express();
 const { MongoClient } = require('mongodb');
 const mongoUri = process.env.MONGO_URI;
 
-app.use(cors());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://life-tracker-service.onrender.com');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
+  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
