@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Gorditas&family=Handlee&display=swap');
+
+:root {
+    --background: linear-gradient(107deg, #ACCBEE -0.4%, #B4D0F0 14.2%, #E7F0FD 108.74%);
+    --background2: linear-gradient(90deg, rgba(207, 217, 223, 0.99) 0%, #E2EBF0 100%);
+    --light: #ACCBEE;
+    --dark: #FA709A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+#root {
+    background: var(--background);
+    min-height: 100vh;
+}
+
+/* LOGIN PAGE */
+
+.login-page__wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font: 1.5em Gloria Hallelujah;
+}
+
+.login-page__wrapper span {
+    font: 1em Gloria Hallelujah;
+    color: rgba(250, 112, 154, 0.96); 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-wrapper img {
+    width: 20%;
+}
+
+.login-page__wrapper button {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page__wrapper button,
+.login-page__wrapper input {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 30px;
+    font-family: Gloria Hallelujah;
+}
+
+.light-button {
+    background-color: var(--light);
+}
+
+.dark-button {
+    background-color: var(--dark);
+}
+
+.login-page__wrapper input {
+    margin: 5px 0;
+    padding: 0 15px;
+    font-size: 1em;
+}
+
+.login-page__error-message,
+.login-page__success-message {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: 90%;
+    height: 350px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px;
+    font-family: Gorditas;
+    font-size: 1.5em;
+    color: white;
+}
+
+.login-page__error-message {
+    background-color: red;
+}
+
+.login-page__success-message {
+    background-color: green;
+    font-size: 1.2em;
+}
+
+.loader-wrapper {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,80%);
+    color: white;
+}
+
+/* HOME PAGE */
+
+nav {
+    display: flex; 
+        padding: 10px 10px;
+}
+
+nav ul {
+    display: none;
+}
+
+.home-page__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+
+.card {
+    min-width: 90vw;
+    height: 350px;
+    border-radius: 30px;
+}
+
+.card ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.title-card {
+    color: gray;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: solid gray 3px;
+}
+
+.profile-card img {
+    width: 200px;
+}
+
+.profile-card p {
+    color: gray;
+    font-size: 3em;
+}
+
+.logout-button {
+    color: rgb(253, 63, 63);
+    font-size: 1.5em;
+}
+
+.habits-card, 
+.goals-card,
+.stats-card,
+.upcoming-event-card,
+.money-card {   
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #C7D1DF 13.9%, #C3CFE2 61.32%, #C1CDDF 78%);
+  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.25);
+}
+
+.activity-progress {
+    display: none;
+}
+
+.stats-card img {
+    width: 100%;
+}
+
+.months-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    font-size: 1.2em;
+}
+
+.account-balance {
+    height: 70px;
+}
+
+
+.switch__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.switch__wrapper button {
+    width: 30vw;
+    height: 5vh;
+    font-size: 1.3em;
+    border-radius: 30px;
+    color: white;
+    border: none;
+    background-color: var(--dark);
+}
+
+.activity-list__wrapper,
+.user-activities-list__wrapper {
+    background: var(--background2);
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px 10px;
+    border-radius: 30px;
+    min-height: 500px;
+}
+
+.activity-list__wrapper ul li,
+.user-activities-list__wrapper ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-family: Gloria Hallelujah;
+}
+
+.activity-list__wrapper ul li img,
+.user-activities-list__wrapper ul li img {
+    height: 50px;
+}
+
+
+.activity-list__wrapper h2,
+.user-activities-list__wrapper h2 {
+    font-size: 2em;
+}
+
+.activity-desc {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 60%;
+}
+
+.add-activity-btn,
+.update-activity-btn {
+    width: 25vw;
+    height: 4vh;
+    border-radius: 30px;
+    border: none;
+    font-size: 1em;
+    color: white;
+}
+
+.add-activity-btn {
+    background: var(--light);
+}
+
+.update-activity-btn {
+    background: var(--dark);
+}
