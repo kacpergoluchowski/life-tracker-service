@@ -4,10 +4,10 @@ import Announcement from '../layouts/Announcement';
 import Loader from "../components/Loader";
 
 const SignIn = () => {
-    const nickname = useRef(null);  // Use `null` instead of `0` for a non-initialized ref
+    const nickname = useRef(null);  
     const password = useRef(null);
     const [messageVisibility, setMessageVisibility] = useState(false);
-    const [message, setMessage] = useState(undefined);  // You can initialize it with `undefined` explicitly
+    const [message, setMessage] = useState(undefined); 
     const [loaderVisibility, setLoaderVisibility] = useState(false);
 
     const showMessage = message => {

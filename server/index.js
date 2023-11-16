@@ -21,7 +21,12 @@ const client = new MongoClient(mongoUri);
 
 app.listen(port, () => {
      console.log('server started!');
-    })
+})
+
+app.get('/', (req, res) => {
+    res.send("SERWER DZIALA")
+})
+
 
 
 app.post('/sign-up', async (req, res) => {
